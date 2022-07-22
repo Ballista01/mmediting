@@ -123,7 +123,7 @@ train_pipeline = [
         type='Collect',
         keys=['gt_img', 'masked_img', 'mask'],
         meta_keys=['gt_img_path']),
-    dict(type='ImageToTensor', keys=['gt_img', 'masked_img', 'mask'])
+    dict(type='ToTensor', keys=['gt_img', 'masked_img', 'mask'])
 ]
 
 test_pipeline = train_pipeline
